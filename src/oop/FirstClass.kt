@@ -1,50 +1,40 @@
 package oop
 
-abstract class FirstClass(open var name:String, open var age:Int) {
+import com.sun.jdi.connect.Connector.SelectedArgument
+
+abstract class FirstClass(open var name:String,open var age:Int) {
     abstract fun motto()
     abstract fun mission()
 }
-
-class SecondClass(override var name: String, override var age: Int):FirstClass(name, age){
+class SecondClass(override var name: String,override var  age:Int):FirstClass(name, age){
     override fun motto() {
         println("Education is the key to success")
     }
 
     override fun mission() {
-        println("To educate the world")
+        println("to educate the world")
     }
 
 }
-class ThirdClass(override var name: String, override var age: Int):FirstClass(name, age) {
+class ThirdClass(override var name:String,override var age:Int):FirstClass(name,age){
     override fun motto() {
-        println("Success is a result of hard work")
+        println("Success and hardwork")
     }
 
     override fun mission() {
-        println("To nature the world through education")
+        println("to empower children")
     }
 }
 
-fun main(args: Array<String>) {
-    var xyz = ThirdClass("king", 100)
+fun main() {
+    var xyz=ThirdClass("aaaa",77)
     xyz.motto()
+    xyz.mission()
 }
-//From Auth class, on register and login methods respectively,
-//validate any user's email and password. If the user has email
-//and password of your liking, proceed to calculate the BMI of
-//the same user from a child class called Bmical.
-//Ensure all credentials are provided by the user through the scanner
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        /*
+        from Auth class,on register and login methods respectively
+        validate any user's email and password ,if the user has an email
+        and password of your liking ,calculate the BMI of the same user from
+        the a Child class called Bmicalc
+        ensure all credentials are provided by the user through the scanner
+        */
